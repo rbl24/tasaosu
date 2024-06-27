@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> TASA </title>
+        <link rel="stylesheet" href="TASA.css">
+        
+    </head>
+<body>
+    <div class="row">
+        <div class="column">
+          <div class="card hidden">
+            <img src="https://org.osu.edu/tasa/files/2024/05/IMG_4737.jpg" alt="Debby" style="width:100%">
+              <div class="text-box-eboard">
+              <p> 
+              Debby Lee 
+              President
+              </p>
+              </div>
+            <div class="container">
+              <h3>Debby Lee</h3>
+              <p class="title">President</p>
+              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+              <p>example@example.com</p>
+              <p><button class="button">Contact</button></p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="column">
+          <div class="card hidden">
+            <img src="https://org.osu.edu/tasa/files/2024/05/Anna1.jpg" alt="Anna" style="width:100%">
+            <div class="container">
+              <h3>Anna Chen</h3>
+              <p class="title">Vice President</p>
+              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+              <p>example@example.com</p>
+              <p><button class="button">Contact</button></p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="column">
+          <div class="card hidden">
+            <img src="https://org.osu.edu/tasa/files/2024/05/Melody-1.jpg" alt="Melody" style="width:100%">
+            <div class="container">
+              <h3>Melody Tsai</h3>
+              <p class="title">Secretary</p>
+              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+              <p>example@example.com</p>
+              <p><button class="button">Contact</button></p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="column">
+          <div class="card">
+            <img src="https://org.osu.edu/tasa/files/2024/05/13D41165-1CF5-4193-97B8-2BB46E4FCF1C.jpg" alt="Adam" style="width:100%">
+            <div class="container">
+              <h3>Adam Reimer</h3>
+              <p class="title">Treasurer</p>
+              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+              <p>example@example.com</p>
+              <p><button class="button">Contact</button></p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="column">
+          <div class="card">
+            <img src="https://org.osu.edu/tasa/files/2024/05/Ryan2.jpg" alt="Ryan" style="width:100%">
+            <div class="container">
+              <h3>Ryan Liu</h3>
+              <p class="title">Event Coordinator</p>
+              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+              <p>example@example.com</p>
+              <p><button class="button">Contact</button></p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="column">
+          <div class="card">
+            <img src="/w3images/team3.jpg" alt="John" style="width:100%">
+            <div class="container">
+              <h3>Gabby Wang</h3>
+              <p class="title">Outreach Chair</p>
+              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+              <p>example@example.com</p>
+              <p><button class="button">Contact</button></p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="column">
+          <div class="card">
+            <img src="/w3images/team3.jpg" alt="John" style="width:100%">
+            <div class="container">
+              <h3>Grace Yan</h3>
+              <p class="title">Co-Media</p>
+              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+              <p>example@example.com</p>
+              <p><button class="button">Contact</button></p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="column">
+          <div class="card">
+            <img src="/w3images/team3.jpg" alt="John" style="width:100%">
+            <div class="container">
+              <h3> </h3>
+              <p class="title">Co-Media</p>
+              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+              <p>example@example.com</p>
+              <p><button class="button">Contact</button></p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="column">
+          <div class="card">
+            <img src="/w3images/team3.jpg" alt="John" style="width:100%">
+            <div class="container">
+              <h3> Henry Wang </h3>
+              <p class="title">Co-Membership</p>
+              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+              <p>example@example.com</p>
+              <p><button class="button">Contact</button></p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="column">
+          <div class="card">
+            <img src="/w3images/team3.jpg" alt="John" style="width:100%">
+            <div class="container">
+              <h3> </h3>
+              <p class="title">Co-Membership</p>
+              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+              <p>example@example.com</p>
+              <p><button class="button">Contact</button></p>
+            </div>
+          </div>
+        </div>
+        <script>
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    console.log(entry) 
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                    }
+                    else {
+                        entry.target.classList.remove('show');
+                    }
+                });
+            });
+        
+            const hiddenElements = document.querySelectorAll('.hidden');
+            hiddenElements.forEach((el) => observer.observe(el));
+        </script>
+      </div>
+    
+</body>
+</html>
