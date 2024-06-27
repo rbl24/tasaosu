@@ -1,0 +1,156 @@
+.test {
+    color: red;
+    border: 2px solid black;
+    animation: slideFromRight 1s ease-in;
+}
+
+.text-box-eboard {
+  position: relative;
+  bottom: 55px;
+  right: -20px;
+  background-color: #774553;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  overflow: hidden;
+  /* 
+  animation: eboard 1s ease-in;
+  */
+}
+
+body {
+    height: 200vh;
+    margin: 0;
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+@media(prefers-reduced-motion) {
+    /*
+    .hidden {
+        transition: none;
+    }
+    */
+}
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.animated-element {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.5s ease-out;
+}
+
+.scroll-watcher {
+    height: 100px;
+    position: fixed;
+    top: 100;
+    z-index: 1000;
+    background-color: blue;
+    width: 100%;
+    transform: scale(0, 1);
+    transform-origin: left;
+    animation: scroll-watcher linear;
+    -webkit-animation-timeline: scroll();
+       -moz-animation-timeline: scroll();
+        -ms-animation-timeline: scroll();
+         -o-animation-timeline: scroll();
+            animation-timeline: scroll();
+}
+@keyframes scroll-watcher {
+    to {transform: scale(0, 1);}   
+}
+@keyframes fade-in-image {
+    from {transform: scale(0.8); opacity: 0;}
+    to {transform: scale(1); opacity: 1;}
+}
+
+@keyframes eboard {
+    0% {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);   
+        opacity: 1;
+    }
+}
+@keyframes slideFromRight {
+    0% {
+        transform: translateX(500px);
+    }
+    100% {
+        transform: translateX(0px);   
+    }
+}
+
+/* Three columns side by side */
+.column {
+  float: left;
+  width: 30%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+/* Display the columns below each other instead of side by side on small screens */
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+/* Add some shadows to create a card effect */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  /* animation: fade-in-image 1s ease-in;
+  animation-timeline: view(600px); 
+  */    
+}
+
+/* Some left and right padding inside the container */
+.container {
+  padding: 0 16px;
+}
+
+/* Clear floats */
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: black;
+  font-size: 16px;
+  font: Georgia;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
